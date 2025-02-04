@@ -1,27 +1,24 @@
-function iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv(code)res=''for i in ipairs(code)do res=res..string.char(code[i]/105)end return res end 
-
-
 -- Gui to Lua
 -- Version: 3.2
 
 -- Instances:
 
-local ScreenGui = Instance.new(iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({8715,10395,11970,10605,10605,11550,7455,12285,11025}))
-local SA = Instance.new(iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({7350,11970,10185,11445,10605}))
-local UICorner = Instance.new(iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({8925,7665,7035,11655,11970,11550,10605,11970}))
-local SAText = Instance.new(iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({8820,10605,12600,12180,7980,10185,10290,10605,11340}))
-local SilentAim = Instance.new(iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({8820,10605,12600,12180,6930,12285,12180,12180,11655,11550}))
-local ESPButton = Instance.new(iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({8820,10605,12600,12180,6930,12285,12180,12180,11655,11550})) -- ESP Button
-local UICorner_ESP = Instance.new(iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({8925,7665,7035,11655,11970,11550,10605,11970})) -- ESP Button Corner
-local UICorner_2 = Instance.new(iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({8925,7665,7035,11655,11970,11550,10605,11970}))
-local MadeBy = Instance.new(iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({8820,10605,12600,12180,7980,10185,10290,10605,11340}))
+local ScreenGui = Instance.new("ScreenGui")
+local SA = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local SAText = Instance.new("TextLabel")
+local SilentAim = Instance.new("TextButton")
+local ESPButton = Instance.new("TextButton") -- ESP Button
+local UICorner_ESP = Instance.new("UICorner") -- ESP Button Corner
+local UICorner_2 = Instance.new("UICorner")
+local MadeBy = Instance.new("TextLabel")
 
 --Properties:
 
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild(iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({8400,11340,10185,12705,10605,11970,7455,12285,11025}))
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-SA.Name = iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({8715,6825})
+SA.Name = "SA"
 SA.Parent = ScreenGui
 SA.BackgroundColor3 = Color3.fromRGB(50, 0, 50) -- Dark purple
 SA.BackgroundTransparency = 0.3 -- Slight transparency
@@ -35,23 +32,23 @@ SA.Size = UDim2.new(0, 360, 0, totalHeight)
 UICorner.CornerRadius = UDim.new(0, 10)
 UICorner.Parent = SA
 
-SAText.Name = iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({8715,6825,3360,8820,10605,12600,12180})
+SAText.Name = "SA Text"
 SAText.Parent = SA
 SAText.BackgroundTransparency = 1
 SAText.Size = UDim2.new(0, 360, 0, 44)
 SAText.Font = Enum.Font.GothamBold
-SAText.Text = iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({6825,11970,12075,10605,11550,10185,11340,3360,8715,6825,3360,4725,3360,10920,10185,11550,11550,10605,12075,9975,12075,12495,10605})
+SAText.Text = "Arsenal SA - hannes_swe"
 SAText.TextColor3 = Color3.fromRGB(255, 255, 255) -- White text
 SAText.TextSize = 30
 SAText.TextStrokeTransparency = 0.5
 
-SilentAim.Name = iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({8715,11025,11340,10605,11550,12180,3360,6825,11025,11445})
+SilentAim.Name = "Silent Aim"
 SilentAim.Parent = SA
 SilentAim.BackgroundColor3 = Color3.fromRGB(30, 30, 30) -- Blackish gray
 SilentAim.Position = UDim2.new(0.22, 0, 0.2, 0)
 SilentAim.Size = UDim2.new(0, 213, 0, 60)
 SilentAim.Font = Enum.Font.GothamBold
-SilentAim.Text = iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({7245,11550,10185,10290,11340,10605,3360,8715,11025,11340,10605,11550,12180,3360,6825,11025,11445})
+SilentAim.Text = "Enable Silent Aim"
 SilentAim.TextColor3 = Color3.fromRGB(255, 255, 255) -- White text
 SilentAim.TextSize = 25
 SilentAim.TextStrokeTransparency = 0.5
@@ -60,13 +57,13 @@ UICorner_2.CornerRadius = UDim.new(0, 8)
 UICorner_2.Parent = SilentAim
 
 -- ESP Button
-ESPButton.Name = iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({7245,8715,8400,6930,12285,12180,12180,11655,11550})
+ESPButton.Name = "ESPButton"
 ESPButton.Parent = SA
 ESPButton.BackgroundColor3 = Color3.fromRGB(30, 30, 30) -- Blackish gray
 ESPButton.Position = UDim2.new(0.22, 0, 0.4, 0) -- Positioned below Silent Aim
 ESPButton.Size = UDim2.new(0, 213, 0, 60)
 ESPButton.Font = Enum.Font.GothamBold
-ESPButton.Text = iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({7245,11550,10185,10290,11340,10605,3360,7245,8715,8400})
+ESPButton.Text = "Enable ESP"
 ESPButton.TextColor3 = Color3.fromRGB(255, 255, 255) -- White text
 ESPButton.TextSize = 25
 ESPButton.TextStrokeTransparency = 0.5
@@ -74,13 +71,13 @@ ESPButton.TextStrokeTransparency = 0.5
 UICorner_ESP.CornerRadius = UDim.new(0, 8)
 UICorner_ESP.Parent = ESPButton
 
-MadeBy.Name = iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({8085,10185,10500,10605,3360,6930,12705})
+MadeBy.Name = "Made By"
 MadeBy.Parent = SA
 MadeBy.BackgroundTransparency = 1
 MadeBy.Position = UDim2.new(0, 0, 0.85, 0)
 MadeBy.Size = UDim2.new(0, 360, 0, 50)
 MadeBy.Font = Enum.Font.GothamBold
-MadeBy.Text = iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({6930,3360,12180,11655,3360,8820,11655,10815,10815,11340,10605,3360,7455,8925,7665})
+MadeBy.Text = "B to Toggle GUI"
 MadeBy.TextColor3 = Color3.fromRGB(180, 180, 180) -- Light gray text
 MadeBy.TextSize = 22
 MadeBy.TextStrokeTransparency = 0.5
@@ -109,15 +106,15 @@ SA.InputBegan:Connect(function(input)
 	end
 end)
 
-game:GetService(iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({8925,12075,10605,11970,7665,11550,11760,12285,12180,8715,10605,11970,12390,11025,10395,10605})).InputChanged:Connect(function(input)
+game:GetService("UserInputService").InputChanged:Connect(function(input)
 	if dragging then
 		updateInput(input)
 	end
 end)
 
--- Toggle GUI with iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({6930}) key
+-- Toggle GUI with "B" key
 local isVisible = true
-game:GetService(iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({8925,12075,10605,11970,7665,11550,11760,12285,12180,8715,10605,11970,12390,11025,10395,10605})).InputBegan:Connect(function(input)
+game:GetService("UserInputService").InputBegan:Connect(function(input)
 	if input.KeyCode == Enum.KeyCode.B then
 		isVisible = not isVisible
 		SA.Visible = isVisible
@@ -134,17 +131,22 @@ local function isEnemy(player)
     if player.Team and LocalPlayer.Team then
         return player.Team ~= LocalPlayer.Team -- Enemies are on different teams
     end
-    return true -- If teams doniRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({12180,3360,10605,12600,11025,12075,12180,4620,3360,12075,10920,11655,12495,3360,7245,8715,8400,3360,10710,11655,11970,3360,10605,12390,10605,11970,12705,11655,11550,10605,1365,1050,10605,11550,10500,1365,1050,1365,1050,11340,11655,10395,10185,11340,3360,10710,12285,11550,10395,12180,11025,11655,11550,3360,10395,11970,10605,10185,12180,10605,7245,8715,8400,4200,11760,11340,10185,12705,10605,11970,4305,1365,1050,3360,3360,3360,3360,11025,10710,3360,11025,12075,7245,11550,10605,11445,12705,4200,11760,11340,10185,12705,10605,11970,4305,3360,10185,11550,10500,3360,11760,11340,10185,12705,10605,11970,4830,7035,10920,10185,11970,10185,10395,12180,10605,11970,3360,10185,11550,10500,3360,11760,11340,10185,12705,10605,11970,4830,7035,10920,10185,11970,10185,10395,12180,10605,11970,6090,7350,11025,11550,10500,7350,11025,11970,12075,12180,7035,10920,11025,11340,10500,4200})UpperTorsoiRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({4305,3360,12180,10920,10605,11550,1365,1050,3360,3360,3360,3360,3360,3360,3360,3360,4725,4725,3360,7035,11970,10605,10185,12180,10605,3360,7245,8715,8400,3360,10710,11655,11970,3360,12180,10920,10605,3360,11550,10185,11445,10605,3360,10185,10290,11655,12390,10605,3360,12180,10920,10605,3360,11760,11340,10185,12705,10605,11970})s head
-        if not player.Character.Head:FindFirstChild(iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({7245,8715,8400,8190,10185,11445,10605})) then
-            local billboard = Instance.new(iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({6930,11025,11340,11340,10290,11655,10185,11970,10500,7455,12285,11025}))
-            billboard.Name = iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({7245,8715,8400,8190,10185,11445,10605})
+    return true -- If teams don't exist, show ESP for everyone
+end
+
+local function createESP(player)
+    if isEnemy(player) and player.Character and player.Character:FindFirstChild("UpperTorso") then
+        -- Create ESP for the name above the player's head
+        if not player.Character.Head:FindFirstChild("ESPName") then
+            local billboard = Instance.new("BillboardGui")
+            billboard.Name = "ESPName"
             billboard.Parent = player.Character.Head
             billboard.Adornee = player.Character.Head
             billboard.Size = UDim2.new(0, 200, 0, 50) -- Size of the name text
             billboard.StudsOffset = Vector3.new(0, 2, 0) -- Position above head
             billboard.AlwaysOnTop = true
 
-            local nameLabel = Instance.new(iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({8820,10605,12600,12180,7980,10185,10290,10605,11340}))
+            local nameLabel = Instance.new("TextLabel")
             nameLabel.Parent = billboard
             nameLabel.Size = UDim2.new(1, 0, 1, 0)
             nameLabel.BackgroundTransparency = 1 -- No background
@@ -156,16 +158,16 @@ local function isEnemy(player)
         end
 
         -- Create the highlight effect on the chest (UpperTorso)
-        if not player.Character:FindFirstChild(iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({7245,8715,8400,7035,10920,10605,12075,12180,7560,11025,10815,10920,11340,11025,10815,10920,12180})) then
-            local highlight = Instance.new(iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({6930,11025,11340,11340,10290,11655,10185,11970,10500,7455,12285,11025}))
-            highlight.Name = iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({7245,8715,8400,7035,10920,10605,12075,12180,7560,11025,10815,10920,11340,11025,10815,10920,12180})
+        if not player.Character:FindFirstChild("ESPChestHighlight") then
+            local highlight = Instance.new("BillboardGui")
+            highlight.Name = "ESPChestHighlight"
             highlight.Parent = player.Character.UpperTorso
             highlight.Adornee = player.Character.UpperTorso
             highlight.Size = UDim2.new(0, 50, 0, 50)  -- Smaller size of the highlight on the chest area
             highlight.StudsOffset = Vector3.new(0, 0, 0)  -- No offset, it will be on the chest
             highlight.AlwaysOnTop = true
 
-            local highlightFrame = Instance.new(iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({7350,11970,10185,11445,10605}))
+            local highlightFrame = Instance.new("Frame")
             highlightFrame.Parent = highlight
             highlightFrame.Size = UDim2.new(1, 0, 1, 0)  -- Make it the same size as the BillboardGui
             highlightFrame.BackgroundColor3 = Color3.fromRGB(150, 0, 150) -- Purple color
@@ -178,12 +180,12 @@ end
 local function removeESP(player)
     if player.Character then
         -- Remove name ESP
-        if player.Character.Head:FindFirstChild(iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({7245,8715,8400,8190,10185,11445,10605})) then
+        if player.Character.Head:FindFirstChild("ESPName") then
             player.Character.Head.ESPName:Destroy()
         end
         
         -- Remove chest highlight ESP (BillboardGui with Frame)
-        if player.Character:FindFirstChild(iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({7245,8715,8400,7035,10920,10605,12075,12180,7560,11025,10815,10920,11340,11025,10815,10920,12180})) then
+        if player.Character:FindFirstChild("ESPChestHighlight") then
             player.Character.ESPChestHighlight:Destroy()
         end
     end
@@ -191,7 +193,7 @@ end
 
 local function toggleESP()
     ESPEnabled = not ESPEnabled
-    ESPButton.Text = ESPEnabled and iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({7140,11025,12075,10185,10290,11340,10605,3360,7245,8715,8400}) or iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({7245,11550,10185,10290,11340,10605,3360,7245,8715,8400})
+    ESPButton.Text = ESPEnabled and "Disable ESP" or "Enable ESP"
 
     -- Loop through all players and update ESP based on toggle
     for _, player in pairs(game.Players:GetPlayers()) do
@@ -250,14 +252,14 @@ local SettingsInfinite = false
 
 local function toggleInfiniteAmmo()
     -- Infinite Ammo v1
-    game:GetService(iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({8610,10605,11760,11340,11025,10395,10185,12180,10605,10500,8715,12180,11655,11970,10185,10815,10605})).wkspc.CurrentCurse.Value = infiniteAmmoEnabled and iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({7665,11550,10710,11025,11550,11025,12180,10605,3360,6825,11445,11445,11655}) or iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({})
+    game:GetService("ReplicatedStorage").wkspc.CurrentCurse.Value = infiniteAmmoEnabled and "Infinite Ammo" or ""
 
     -- Infinite Ammo v2
     if SettingsInfinite then
-        game:GetService(iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({8610,12285,11550,8715,10605,11970,12390,11025,10395,10605})).Stepped:connect(function()
+        game:GetService("RunService").Stepped:connect(function()
             pcall(function()
                 if SettingsInfinite then
-                    local playerGui = game:GetService(iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({8400,11340,10185,12705,10605,11970,12075})).LocalPlayer.PlayerGui
+                    local playerGui = game:GetService("Players").LocalPlayer.PlayerGui
                     playerGui.GUI.Client.Variables.ammocount.Value = 99
                     playerGui.GUI.Client.Variables.ammocount2.Value = 99
                 end
@@ -270,7 +272,7 @@ end
 local originalValues = { FireRate = {} }
 local function toggleFireRate(state)
     for _, v in pairs(game.ReplicatedStorage.Weapons:GetDescendants()) do
-        if v.Name == iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({7350,11025,11970,10605,8610,10185,12180,10605}) or v.Name == iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({6930,7350,11025,11970,10605,8610,10185,12180,10605}) then
+        if v.Name == "FireRate" or v.Name == "BFireRate" then
             if state then
                 if not originalValues.FireRate[v] then
                     originalValues.FireRate[v] = v.Value
@@ -291,7 +293,7 @@ end
 local originalValuesReload = { ReloadTime = {}, EReloadTime = {} }
 local function toggleReloadAndAuto(state)
     for _, v in pairs(game.ReplicatedStorage.Weapons:GetChildren()) do
-        if v:FindFirstChild(iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({8610,10605,11340,11655,10185,10500,8820,11025,11445,10605})) then
+        if v:FindFirstChild("ReloadTime") then
             if state then
                 if not originalValuesReload.ReloadTime[v] then
                     originalValuesReload.ReloadTime[v] = v.ReloadTime.Value
@@ -302,7 +304,7 @@ local function toggleReloadAndAuto(state)
             end
         end
 
-        if v:FindFirstChild(iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({7245,8610,10605,11340,11655,10185,10500,8820,11025,11445,10605})) then
+        if v:FindFirstChild("EReloadTime") then
             if state then
                 if not originalValuesReload.EReloadTime[v] then
                     originalValuesReload.EReloadTime[v] = v.EReloadTime.Value
@@ -313,7 +315,7 @@ local function toggleReloadAndAuto(state)
             end
         end
 
-        if v:FindFirstChild(iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({6825,12285,12180,11655})) then
+        if v:FindFirstChild("Auto") then
             if state then
                 v.Auto.Value = true  -- Always Auto
             else
@@ -326,7 +328,7 @@ end
 local originalValuesSpread = { Spread = {} }
 local function toggleSpread(state)
     for _, v in pairs(game.ReplicatedStorage.Weapons:GetDescendants()) do
-        if v.Name == iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({8715,11760,11970,10605,10185,10500}) then
+        if v.Name == "Spread" then
             if state then
                 if not originalValuesSpread.Spread[v] then
                     originalValuesSpread.Spread[v] = v.Value
@@ -342,7 +344,7 @@ end
 local originalValuesRecoil = { Recoil = {} }
 local function toggleRecoil(state)
     for _, v in pairs(game.ReplicatedStorage.Weapons:GetDescendants()) do
-        if v.Name == iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({8610,10605,10395,11655,11025,11340}) then
+        if v.Name == "Recoil" then
             if state then
                 if not originalValuesRecoil.Recoil[v] then
                     originalValuesRecoil.Recoil[v] = v.Value
@@ -359,7 +361,7 @@ end
 SilentAim.MouseButton1Down:connect(function()
     function getplrsname()
         for i,v in pairs(game:GetChildren()) do
-            if v.ClassName == iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({8400,11340,10185,12705,10605,11970,12075}) then
+            if v.ClassName == "Players" then
                 return v.Name
             end
         end
@@ -411,12 +413,12 @@ SilentAim.MouseButton1Down:connect(function()
 end)
 
 -- Setup Infinite Ammo toggle button
-GunmodsSection:NewToggle(iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({7665,11550,10710,11025,11550,11025,12180,10605,3360,6825,11445,11445,11655,3360,12390,5145}), iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({6615}), function(v)
+GunmodsSection:NewToggle("Infinite Ammo v1", "?", function(v)
     infiniteAmmoEnabled = v
     toggleInfiniteAmmo()  -- Enable or Disable Infinite Ammo
 end)
 
-GunmodsSection:NewToggle(iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({7665,11550,10710,11025,11550,11025,12180,10605,3360,6825,11445,11445,11655,3360,12390,5250}), iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({6615}), function(K)
+GunmodsSection:NewToggle("Infinite Ammo v2", "?", function(K)
     SettingsInfinite = K
     if SettingsInfinite then
         toggleInfiniteAmmo()  -- Enable Infinite Ammo v2
@@ -424,20 +426,20 @@ GunmodsSection:NewToggle(iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({7665,11550,10710,11025,
 end)
 
 -- Setup Fast Fire Rate toggle button
-GunmodsSection:NewToggle(iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({7350,10185,12075,12180,3360,7350,11025,11970,10605,3360,8610,10185,12180,10605}), iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({6615}), function(state)
+GunmodsSection:NewToggle("Fast Fire Rate", "?", function(state)
     toggleFireRate(state)  -- Enable or Disable Fast Fire Rate
 end)
 
 -- Setup Fast Reload, Always Auto, No Spread, and No Recoil toggle buttons
-GunmodsSection:NewToggle(iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({7350,10185,12075,12180,3360,8610,10605,11340,11655,10185,10500,3360,10185,11550,10500,3360,6825,12285,12180,11655}), iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({6615}), function(state)
+GunmodsSection:NewToggle("Fast Reload and Auto", "?", function(state)
     toggleReloadAndAuto(state)  -- Enable or Disable Fast Reload & Always Auto
 end)
 
-GunmodsSection:NewToggle(iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({8190,11655,3360,8715,11760,11970,10605,10185,10500}), iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({6615}), function(state)
+GunmodsSection:NewToggle("No Spread", "?", function(state)
     toggleSpread(state)  -- Enable or Disable No Spread
 end)
 
-GunmodsSection:NewToggle(iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({8190,11655,3360,8610,10605,10395,11655,11025,11340}), iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({6615}), function(state)
+GunmodsSection:NewToggle("No Recoil", "?", function(state)
     toggleRecoil(state)  -- Enable or Disable No Recoil
 end)
 
@@ -448,7 +450,7 @@ coroutine.wrap(BNQNGFT_fake_script)()
 SilentAim.MouseButton1Down:connect(function()
 	function getplrsname()
 		for i,v in pairs(game:GetChildren()) do
-			if v.ClassName == iRAiIWyEfkdwTzwOCBlwHtzsrHGPIv({8400,11340,10185,12705,10605,11970,12075}) then
+			if v.ClassName == "Players" then
 				return v.Name
 			end
 		end
@@ -481,4 +483,4 @@ SilentAim.MouseButton1Down:connect(function()
 			end))
 		end
 	end))
-end)    
+end)
